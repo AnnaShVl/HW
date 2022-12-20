@@ -1,4 +1,9 @@
 from aiogram import Bot, Dispatcher, executor, types
+#import datetime
+import sys
+import logging
+from logging import StreamHandler, Formatter
+
 
 
 # нужно вставить токен бота, полученный у @BotFather
@@ -25,6 +30,20 @@ async def process_help_command(message: types.Message):
 @dp.message_handler()
 async def send_echo(message: types.Message):
     await message.reply(message.text)
+
+
+# dtn = datetime.datetime.now()
+# botlogfile = open('TestBot.log', 'a')
+# print(dtn.strftime("%d-%m-%Y %H:%M"), 'Пользователь ' + message.from_user.first_name, message.from_user.id, 'написал следующее: ' + message.text, file=botlogfile)
+# botlogfile.close()#
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+handler = StreamHandler(stream=sys.stdout)
+handler.setFormatter(Formatter(fmt='[%(asctime)s: %(levelname)s] %(message)s'))
+logger.addHandler(handler)
+
+logger.debug('debug information')
 
 
 if __name__ == '__main__':
