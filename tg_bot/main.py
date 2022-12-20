@@ -2,7 +2,7 @@ from aiogram import Bot, Dispatcher, executor, types
 
 
 # нужно вставить токен бота, полученный у @BotFather
-API_TOKEN: str = '5585223513:AAH0LsobRTjJK4Uy6R4GYuibd1st_M-ibJI'
+API_TOKEN: str = '<bottoken>'
 
 # Создаем объекты бота и диспетчера
 bot: Bot = Bot(token=API_TOKEN)
