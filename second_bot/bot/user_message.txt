@@ -1,0 +1,5 @@
+user_id: 1573074589 текст: /start
+user_id: 1573074589 текст: azt
+user_id: 1573074589 текст: /start
+user_id: 1573074589 текст: vvv
+user_id: 1573074589 текст: v,j
